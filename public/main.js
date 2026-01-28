@@ -1,26 +1,23 @@
-// Reveal on scroll
-const reveals = document.querySelectorAll(".reveal");
+// reveal animation
+const els = document.querySelectorAll(".reveal");
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-    }
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add("visible");
   });
 });
 
-reveals.forEach(r => observer.observe(r));
+els.forEach(el => obs.observe(el));
 
-// Email protection
-const emailBtn = document.getElementById("email-btn");
-const emailOut = document.getElementById("email-output");
+// email protection
+const btn = document.getElementById("email-btn");
+const out = document.getElementById("email");
 
-// email split & reversed
 const user = "jakub.szydl";
 const domain = "gmail.com";
 
-emailBtn.addEventListener("click", () => {
-  emailOut.textContent = `${user}@${domain}`;
-  emailOut.classList.remove("hidden");
-  emailBtn.disabled = true;
+btn.addEventListener("click", () => {
+  out.textContent = `${user}@${domain}`;
+  out.classList.remove("hidden");
+  btn.disabled = true;
 });

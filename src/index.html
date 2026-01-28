@@ -3,72 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <title>Jakub Szydło · About</title>
-  <link rel="stylesheet" href="../public/style.css" />
-  <script defer src="../public/main.js"></script>
+
+  <!-- KLUCZOWE -->
+  <link rel="stylesheet" href="public/style.css" />
+  <script defer src="public/main.js"></script>
 </head>
+
 <body>
-  <div class="background"></div>
+  <div class="gradient-bg"></div>
 
-  <main class="container">
+  <main class="wrapper">
     <section class="hero reveal">
-      <h1>Jakub Szydło</h1>
+      <h1>
+        Jakub Szydło <span class="accent">∑</span>
+      </h1>
+
       <p class="subtitle">
-        CS & Mathematics Student <span class="latex">∧</span> ex-SWE Intern
+        Computer Science & Mathematics
+        <span class="latex">∧</span>
+        ex-SWE Intern
       </p>
 
-      <p class="tagline">
-        Building reliable systems, solving hard problems,
-        and teaching others how to think algorithmically.
+      <p class="intro">
+        I build reliable systems, solve hard problems,
+        and enjoy clean engineering.
       </p>
     </section>
 
     <section class="card reveal">
-      <h2>⟨ About me ⟩</h2>
+      <h2>⟨ About ⟩</h2>
       <p>
-        I study Computer Science and Mathematics at the University of Wroclaw,
-        in a selective program for students with strong olympiad backgrounds.
-        Competitive programming shaped my problem-solving mindset,
-        while backend engineering taught me how theory meets reality.
+        CS & Mathematics student at the University of Wroclaw,
+        focused on backend engineering, algorithms,
+        and performance-oriented systems.
       </p>
     </section>
 
     <section class="card reveal">
-      <h2>⟨ Experience snapshot ⟩</h2>
+      <h2>⟨ Experience ⟩</h2>
       <ul>
-        <li>
-          <span class="latex">→</span>
-          <strong>Revolut</strong> — backend & MLOps tooling,
-          performance-oriented Python systems.
-        </li>
-        <li>
-          <span class="latex">→</span>
-          Programming mentor & lecturer in algorithmic training camps.
-        </li>
-        <li>
-          <span class="latex">→</span>
-          Finalist of the Polish National Olympiad in Informatics.
-        </li>
+        <li><span class="latex">→</span> Revolut — backend & MLOps</li>
+        <li><span class="latex">→</span> Programming mentor</li>
+        <li><span class="latex">→</span> Polish OI finalist</li>
       </ul>
     </section>
 
     <section class="card reveal">
       <h2>⟨ Contact ⟩</h2>
-      <ul class="links">
-        <li>
-          <a href="https://www.linkedin.com/in/jakub-szydlo-7b6535227" target="_blank">
-            LinkedIn
-          </a>
-        </li>
-        <li>
-          <button id="email-btn">Show email</button>
-        </li>
-      </ul>
-      <p id="email-output" class="email hidden"></p>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/jakub-szydlo-7b6535227" target="_blank">
+          LinkedIn
+        </a>
+        <button id="email-btn">Reveal email</button>
+      </div>
+      <p id="email" class="email hidden"></p>
     </section>
 
     <footer class="reveal">
       <p>
-        Built with <span class="latex">∑</span> HTML, CSS & GitHub Actions
+        Built with <span class="latex">∫</span> HTML, CSS & GitHub Actions
       </p>
     </footer>
   </main>

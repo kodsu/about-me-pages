@@ -1,9 +1,9 @@
 :root {
     --blue: #38bdf8;
-    --blue-soft: #60a5fa;
-    --bg-dark: #0b1220;
-    --glass: rgba(255, 255, 255, 0.08);
-    --border: rgba(255, 255, 255, 0.15);
+    --blue-strong: #0ea5e9;
+    --gray: #cbd5e1;
+    --bg: #020617;
+    --glass: rgba(255,255,255,0.1);
   }
   
   * {
@@ -13,106 +13,92 @@
   
   body {
     margin: 0;
-    background: radial-gradient(circle at top, #111827, var(--bg-dark));
-    color: #e5e7eb;
+    background: var(--bg);
+    color: white;
     min-height: 100vh;
   }
   
-  .background {
+  .gradient-bg {
     position: fixed;
     inset: 0;
     background:
-      radial-gradient(circle at 20% 20%, rgba(56,189,248,0.15), transparent 40%),
-      radial-gradient(circle at 80% 30%, rgba(96,165,250,0.12), transparent 45%);
+      radial-gradient(circle at 20% 20%, rgba(56,189,248,0.35), transparent 40%),
+      radial-gradient(circle at 80% 30%, rgba(14,165,233,0.35), transparent 45%),
+      radial-gradient(circle at 50% 80%, rgba(125,211,252,0.25), transparent 50%);
+    animation: move 16s infinite alternate ease-in-out;
     z-index: -1;
   }
   
-  .container {
-    max-width: 820px;
+  @keyframes move {
+    from { transform: scale(1); }
+    to { transform: scale(1.15); }
+  }
+  
+  .wrapper {
+    max-width: 900px;
     margin: auto;
     padding: 4rem 1.5rem;
     display: grid;
-    gap: 2rem;
+    gap: 2.5rem;
   }
   
   .hero h1 {
-    font-size: 3rem;
+    font-size: 3.2rem;
     margin: 0;
   }
   
-  .subtitle {
-    color: var(--blue-soft);
-    font-size: 1.1rem;
+  .accent {
+    color: var(--blue);
   }
   
-  .tagline {
-    margin-top: 1rem;
+  .subtitle {
+    color: var(--blue);
+  }
+  
+  .intro {
+    color: var(--gray);
     max-width: 600px;
-    color: #cbd5f5;
   }
   
   .card {
     background: var(--glass);
     backdrop-filter: blur(14px);
-    border: 1px solid var(--border);
-    border-radius: 18px;
+    border-radius: 20px;
     padding: 2rem;
-    box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.4);
   }
   
   h2 {
-    color: var(--blue);
-    margin-top: 0;
-  }
-  
-  ul {
-    padding-left: 1.2rem;
-  }
-  
-  .links {
-    list-style: none;
-    padding: 0;
-  }
-  
-  a, button {
-    color: var(--blue);
-    background: none;
-    border: none;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  a:hover, button:hover {
-    text-decoration: underline;
+    color: var(--blue-strong);
   }
   
   .latex {
     font-family: "Times New Roman", serif;
     font-style: italic;
-    color: var(--blue-soft);
+    color: var(--blue);
   }
   
-  footer {
-    text-align: center;
-    color: #94a3b8;
+  .links {
+    display: flex;
+    gap: 1.5rem;
   }
   
-  /* Animacje */
+  a, button {
+    background: none;
+    border: none;
+    color: var(--blue);
+    cursor: pointer;
+  }
   
   .reveal {
     opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.8s ease;
+    transform: translateY(25px);
+    transition: all 0.9s ease;
   }
   
   .reveal.visible {
     opacity: 1;
     transform: none;
-  }
-  
-  .email {
-    margin-top: 1rem;
-    font-family: monospace;
   }
   
   .hidden {
